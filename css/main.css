@@ -277,6 +277,7 @@ a:hover {
     font-size:2em;
     width:80%;
     margin: 200px auto 0;
+    min-height: 500px;
 }
 .count, .desc{
     color: #666;
