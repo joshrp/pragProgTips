@@ -33,7 +33,7 @@
 			List taken from here <a href="http://pragprog.com/the-pragmatic-programmer/extracts/tips">pragprog.com/the-pragmatic-programmer/extracts/tips</a>
 		</div>
 	</div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 	<script>
 		$(function(){
@@ -45,7 +45,7 @@
 
 			var newMessage = function(num){
 				var pushed = false;
-				if (num === undefined)
+				if (num === undefined || num === null) 
 					num = Math.floor( Math.random() * json.elements.length );
 				else {
 					pushed = true;
@@ -66,13 +66,22 @@
 			});
 
 			$(window).on('popstate', function(e){
-				 var state = e.originalEvent.state;
-				 if (state && state.hasOwnProperty('num'))
-				 	newMessage(state.num);
+				var state = e.originalEvent.state;
 
+				if (state && state.hasOwnProperty('num'))
+					newMessage(state.num);
 			});
 
-			newMessage();
+			$(window).on('hashchange', function(){
+				var num = null;
+				if (window.location.hash !== '')
+					num = window.location.hash.substr(1);
+
+				newMessage(num);
+			});
+			$(window).trigger('hashchange');
+			
+
 		});
 	</script>
 	<script type="text/template" id="pragProgList">

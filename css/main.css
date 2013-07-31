@@ -276,8 +276,7 @@ a:hover {
     text-align: center;
     font-size:2em;
     width:80%;
-    margin: 200px auto 0;
-    min-height: 500px;
+    margin: 150px auto;
 }
 .count, .desc{
     color: #666;
@@ -287,12 +286,10 @@ a:hover {
     color: #222;
 }
 .footer {
-    left: 10%;
     width: 80%;
+    margin: 0 auto;
     font-size: 0.8em;
     text-align: center;
-    position:fixed;
-    bottom:0;
 }
 .footer div {
     padding-top: 1em;
