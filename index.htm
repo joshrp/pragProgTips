@@ -13,20 +13,21 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/pragprogtips.css">
 </head>
 <body>
 	<!--[if lt IE 7]>
 		<p >You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 	<![endif]-->
 	<a class="content" href="/">
+		<div class="title"></div>
+		<div class="desc"></div>
 		<div class="count">
 			Tip #<span></span>
 		</div>
-		<div class="title"></div>
-		<div class="desc"></div>
 	</a>
 	<div class="footer">
+		<section class="spacebar-prompt">Press Spacebar...</section>
 		<div class="source">Source at <a href="https://github.com/paystey/pragProgTips">github.com/paystey/pragProgTips</a></div>
 		<div class="copy">From the brilliant book <a href="http://pragprog.com/">The Pragmatic Programmer</a></div>
 		<div class="small">
@@ -34,8 +35,7 @@
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-	<script src="js/main.js"></script>
+	<script src="scripts/pragprogtips.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,7 +44,6 @@
 
 	  ga('create', 'UA-42898694-1', 'mrjrp.com');
 	  ga('send', 'pageview');
-
 	</script>
 </body>
 </html>

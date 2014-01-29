@@ -3,7 +3,7 @@ $(function(){
 		count = $('.content .count span'),
 		desc = $('.content .desc')
 
-	var newMessage = function(num){
+	var nextTip = function(num){
 		var pushed = false;
 		if (num === undefined || num === null) 
 			num = Math.floor( Math.random() * json.elements.length );
@@ -20,8 +20,17 @@ $(function(){
 		count.html(num+1);
 	};
 
+	// Spacebar action
+	$(document).ready(function () {
+	  }).keypress(function (event) {
+	    if (event.which === 32) {
+	      $('.spacebar-prompt').hide();
+	      nextTip();
+	    }
+	  });
+
 	$('body').on('click', 'a.content', function(e){
-		newMessage();
+		nextTip();
 		e.preventDefault();
 	});
 
@@ -29,7 +38,7 @@ $(function(){
 		var state = e.originalEvent.state;
 
 		if (state && state.hasOwnProperty('num'))
-			newMessage(state.num);
+			nextTip(state.num);
 	});
 
 	$(window).on('hashchange', function(){
@@ -37,7 +46,7 @@ $(function(){
 		if (window.location.hash !== '')
 			num = window.location.hash.substr(1);
 
-		newMessage(num);
+		nextTip(num);
 	});
 	$(window).trigger('hashchange');
 	

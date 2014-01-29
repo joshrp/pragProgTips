@@ -278,12 +278,19 @@ a:hover {
     width:80%;
     margin: 150px auto;
 }
-.count, .desc{
+.count {
+    padding: 10px;
+    color: #999;
+    font-size: 0.4em;
+} 
+
+.desc{
     color: #666;
     font-size: 0.8em;
 }
 .title{
     color: #222;
+    font-weight: bold;
 }
 .footer {
     width: 80%;
