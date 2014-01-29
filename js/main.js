@@ -24,6 +24,7 @@ $(function(){
 	$(document).ready(function () {
 	  }).keypress(function (event) {
 	    if (event.which === 32) {
+	      $('.spacebar-prompt').hide();
 	      nextTip();
 	    }
 	  });
