@@ -284,6 +284,7 @@ a:hover {
 }
 .title{
     color: #222;
+    font-weight: bold;
 }
 .footer {
     width: 80%;
