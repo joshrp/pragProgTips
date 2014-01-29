@@ -20,6 +20,14 @@ $(function(){
 		count.html(num+1);
 	};
 
+	// Spacebar action
+	$(document).ready(function () {
+	  }).keypress(function (event) {
+	    if (event.which === 32) {
+	      newMessage();
+	    }
+	  });
+
 	$('body').on('click', 'a.content', function(e){
 		newMessage();
 		e.preventDefault();
